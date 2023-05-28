@@ -27,12 +27,17 @@ namespace Crud
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.DialogResult= DialogResult.Cancel;
+            this.DialogResult = DialogResult.Cancel;
         }
 
         private void frmDetalhe_Load(object sender, EventArgs e)
         {
             bsDetalhe.DataSource = agenda;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

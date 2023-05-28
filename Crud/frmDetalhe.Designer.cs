@@ -28,117 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.bsDetalhe = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnOk = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.bsDetalhe)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            bsDetalhe = new BindingSource(components);
+            textBox1 = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            textBox2 = new TextBox();
+            label3 = new Label();
+            textBox3 = new TextBox();
+            btnCancelar = new Button();
+            btnOk = new Button();
+            ((System.ComponentModel.ISupportInitialize)bsDetalhe).BeginInit();
+            SuspendLayout();
             // 
             // bsDetalhe
             // 
-            this.bsDetalhe.DataSource = typeof(DAL.Agenda);
+            bsDetalhe.DataSource = typeof(DAL.Agenda);
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsDetalhe, "Nome", true));
-            this.textBox1.Location = new System.Drawing.Point(12, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(309, 23);
-            this.textBox1.TabIndex = 0;
+            textBox1.BackColor = Color.MintCream;
+            textBox1.DataBindings.Add(new Binding("Text", bsDetalhe, "Nome", true));
+            textBox1.Location = new Point(12, 26);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(320, 23);
+            textBox1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nome";
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 8);
+            label1.Name = "label1";
+            label1.Size = new Size(40, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Nome";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Endereco";
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 70);
+            label2.Name = "label2";
+            label2.Size = new Size(56, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Endereco";
             // 
             // textBox2
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsDetalhe, "Endereco", true));
-            this.textBox2.Location = new System.Drawing.Point(12, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(309, 23);
-            this.textBox2.TabIndex = 2;
+            textBox2.BackColor = Color.MintCream;
+            textBox2.DataBindings.Add(new Binding("Text", bsDetalhe, "Endereco", true));
+            textBox2.Location = new Point(12, 88);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(320, 23);
+            textBox2.TabIndex = 2;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 170);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Telefone";
+            label3.AutoSize = true;
+            label3.Location = new Point(12, 137);
+            label3.Name = "label3";
+            label3.Size = new Size(51, 15);
+            label3.TabIndex = 5;
+            label3.Text = "Telefone";
             // 
             // textBox3
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsDetalhe, "Telefone", true));
-            this.textBox3.Location = new System.Drawing.Point(18, 188);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(209, 23);
-            this.textBox3.TabIndex = 4;
+            textBox3.BackColor = Color.MintCream;
+            textBox3.DataBindings.Add(new Binding("Text", bsDetalhe, "Telefone", true));
+            textBox3.Location = new Point(12, 155);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(178, 23);
+            textBox3.TabIndex = 4;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(204, 250);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(65, 30);
-            this.btnCancelar.TabIndex = 6;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            btnCancelar.Location = new Point(271, 150);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(65, 30);
+            btnCancelar.TabIndex = 6;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(275, 250);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(65, 30);
-            this.btnOk.TabIndex = 7;
-            this.btnOk.Text = "OK";
-            this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            btnOk.Location = new Point(196, 150);
+            btnOk.Name = "btnOk";
+            btnOk.Size = new Size(65, 30);
+            btnOk.TabIndex = 7;
+            btnOk.Text = "OK";
+            btnOk.UseVisualStyleBackColor = true;
+            btnOk.Click += btnOk_Click;
             // 
             // frmDetalhe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 303);
-            this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frmDetalhe";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Detalhe";
-            this.Load += new System.EventHandler(this.frmDetalhe_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bsDetalhe)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(143, 250, 214);
+            ClientSize = new Size(348, 198);
+            Controls.Add(btnOk);
+            Controls.Add(btnCancelar);
+            Controls.Add(label3);
+            Controls.Add(textBox3);
+            Controls.Add(label2);
+            Controls.Add(textBox2);
+            Controls.Add(label1);
+            Controls.Add(textBox1);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "frmDetalhe";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Detalhe";
+            Load += frmDetalhe_Load;
+            ((System.ComponentModel.ISupportInitialize)bsDetalhe).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

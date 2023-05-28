@@ -32,14 +32,14 @@ namespace DAL
 
         public void Udpate (Agenda agenda)
         {
-            var filter = Builders<Agenda>.Filter.Eq("Id", agenda.Id);
-            var update = Builders<Agenda>.Update.Set("Nome", agenda.Nome).Set("Telefone", agenda.Telefone).Set("Endereco", agenda.Endereco);
+            var filter = Builders<Agenda>.Filter.Eq("_id", agenda.Id);
+            var update = Builders<Agenda>.Update.Set("name", agenda.Nome).Set("phone", agenda.Telefone).Set("address", agenda.Endereco);
         }
 
         public Repositorio()
         {
-            var mongoClient = new MongoClient("mongodb+srv://claudio:suamae123456@cluster0.e962m0s.mongodb.net/");
-            var mongoDatabase = mongoClient.GetDatabase("apdesktop");
+            var mongoClient = new MongoClient("mongodb+srv://felipe218411:Codigo11881@cluster0.gu97kq6.mongodb.net/Agenda?retryWrites=true&w=majority");
+            var mongoDatabase = mongoClient.GetDatabase("appdesktop");
             _agenda = mongoDatabase.GetCollection<Agenda>("agenda");
 
         }
